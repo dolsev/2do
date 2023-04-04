@@ -1,7 +1,9 @@
 React TodoList
+
 This is a simple TodoList app built with React and TypeScript. It allows users to create, edit, and delete tasks.
 
 Getting started
+
 To get started with the project, you'll need to have Node.js and npm installed on your computer.
 
 1. Clone this repository to your local machine: git clone https://github.com/dolsev/2do.git
