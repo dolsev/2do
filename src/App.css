@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+.App{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.Header {
+    color: white;
+    height: 80px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-list-container {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    min-height: 320px;
+    background-color: white;
+    padding:10px 20px;
+    gap:15px;
+    border-radius: 5px;
+}
+.add-button{
+    width: 80px;
+    background-color: #006188;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.input-container > input {
+    width: 100%;
+    border: solid 1px #006188;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-container > input:focus {
+    outline: none;
+    border-color: #3e5c69;
+    box-shadow: 0 0 5px #4995b0;
 }
 
-.App-link {
-  color: #61dafb;
+.list{
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list input[type="checkbox"]:checked + .text-box {
+    color: #18cb43;
+}
+.filter-buttons{
+    display: flex;
+    gap:5px;
+}
+.filter-buttons>button{
+    width: 80px;
+    background-color: white;
+    border: #3e5c69 solid 1px;
+    cursor: pointer;
+}
+.filter-buttons>button.chosen{
+    background-color: #006188;
+    color: white;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    width: 100%;
+    gap:5px;
+
+}
+.item-textbox{
+    max-width: 100px;
+    overflow-wrap: break-word;
+
+}
+span {
+    max-width: 400px;
+    display: inline-block;
+    overflow-wrap:break-word;
+}
+.right{
+    display: flex;
+    gap:10px;
+
+}
+.icon{
+    cursor:pointer;
+    width:16px;
+    height: 16px;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+}
+.icon:hover{
+    transform: scale(110%);
 }
